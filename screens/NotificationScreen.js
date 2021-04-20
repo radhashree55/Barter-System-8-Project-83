@@ -45,7 +45,7 @@ export default class NotificationScreen extends Component {
   }
 
   componentWillUnmount() {
-    this.notificationRef();
+    // this.notificationRef();
   }
 
   keyExtractor = (item, index) => index.toString();
@@ -64,10 +64,7 @@ export default class NotificationScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={{ flex: 0.1 }}>
-          <MyHeader
-            title={"Notifications"}
-            navigation={this.props.navigation}
-          />
+          <MyHeader title="Notifications" navigation={this.props.navigation} />
         </View>
         <View style={{ flex: 0.9 }}>
           {this.state.allNotifications.length === 0 ? (
@@ -78,9 +75,7 @@ export default class NotificationScreen extends Component {
                 alignItems: "center",
               }}
             >
-              <Text style={{ fontSize: 25 }}>
-                You have no new Notifications!
-              </Text>
+              <Text style={{ fontSize: 25 }}>No new Notifications!</Text>
             </View>
           ) : (
             <FlatList

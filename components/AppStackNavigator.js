@@ -19,6 +19,6 @@ export const AppStackNavigator = createStackNavigator(
     },
   },
   {
-    initialRouteName: "HomeList",
+    initialRouteName: "Home",
   }
 );

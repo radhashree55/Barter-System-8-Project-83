@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "mediumorchid",
-    fontSize: 20,
+    fontSize: 24,
+    fontWeight: "bold",
   },
 });

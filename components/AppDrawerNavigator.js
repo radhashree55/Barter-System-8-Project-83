@@ -17,7 +17,7 @@ export const AppDrawerNavigator = createDrawerNavigator(
     MyBarters: {
       screen: MyBartersScreen,
     },
-    Notification: {
+    Notifications: {
       screen: NotificationScreen,
     },
   },

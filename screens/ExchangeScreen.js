@@ -47,8 +47,18 @@ export default class ExchangeScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <MyHeader title="Request Items" />
+        <MyHeader title="Request Items" navigation={this.props.navigation} />
         <KeyboardAvoidingView style={styles.keyBoardStyle}>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 20,
+              marginTop: -60,
+              marginBottom: 30,
+            }}
+          >
+            Add an Item for Exchange with Others!
+          </Text>
           <TextInput
             style={[styles.formTextInput, { height: 50 }]}
             placeholder={"Item Name"}
@@ -79,7 +89,13 @@ export default class ExchangeScreen extends Component {
               this.addItem(this.state.itemName, this.state.itemDescription);
             }}
           >
-            <Text style={{ color: "mediumorchid", fontSize: 20 }}>
+            <Text
+              style={{
+                color: "mediumorchid",
+                fontSize: 24,
+                fontWeight: "bold",
+              }}
+            >
               Add Item
             </Text>
           </TouchableOpacity>

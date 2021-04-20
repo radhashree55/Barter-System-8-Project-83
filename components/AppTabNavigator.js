@@ -14,7 +14,7 @@ export const AppTabNavigator = createBottomTabNavigator({
           style={{ width: 40, height: 40 }}
         />
       ),
-      tabBarLabel: "Home",
+      tabBarLabel: "Exchange",
     },
   },
   Exchange: {
@@ -26,7 +26,7 @@ export const AppTabNavigator = createBottomTabNavigator({
           style={{ width: 40, height: 40 }}
         />
       ),
-      tabBarLabel: "Exchange",
+      tabBarLabel: "Request",
     },
   },
 });

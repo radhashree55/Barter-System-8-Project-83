@@ -10,7 +10,7 @@ const BellIconWithBadge = (props) => {
         type="font-awesome"
         color="black"
         size={30}
-        onPress={() => props.navigation.navigate("Notification")}
+        onPress={() => props.navigation.navigate("Notifications")}
       />
       <Badge
         value="1"
@@ -35,10 +35,11 @@ const MyHeader = (props) => {
       centerComponent={{
         text: props.title,
         style: {
-          fontSize: 31,
+          fontSize: 30,
           fontWeight: "300",
           paddingBottom: 10,
           color: "mediumorchid",
+          fontWeight: "bold",
         },
       }}
       rightComponent={<BellIconWithBadge {...props} />}

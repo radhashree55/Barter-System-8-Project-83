@@ -104,10 +104,14 @@ export default class ReceiverDetailsScreen extends Component {
               />
             }
             centerComponent={{
-              text: "Exchange Items",
-              style: { color: "white", fontSize: 30, fontWeight: "bold" },
+              text: "Exchange Item",
+              style: {
+                color: "mediumorchid",
+                fontSize: 30,
+                fontWeight: "bold",
+              },
             }}
-            backgroundColor="#ff5722"
+            backgroundColor="lavender"
           />
         </View>
         <View style={{ flex: 0.3 }}>
@@ -144,7 +148,7 @@ export default class ReceiverDetailsScreen extends Component {
           </Card>
         </View>
         <View style={styles.buttonContainer}>
-          {this.state.receiverId !== this.state.userId ? (
+          {this.state.receiverId == this.state.userId ? (
             <TouchableOpacity
               style={styles.button}
               onPress={() => {
@@ -153,7 +157,15 @@ export default class ReceiverDetailsScreen extends Component {
                 this.props.navigation.navigate("MyBarters");
               }}
             >
-              <Text style={{ fontSize: 17 }}>I wish to Exchange</Text>
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: "mediumorchid",
+                  fontWeight: "bold",
+                }}
+              >
+                I wish to Exchange!
+              </Text>
             </TouchableOpacity>
           ) : null}
         </View>
@@ -172,17 +184,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    width: 200,
+    width: "65%",
     height: 50,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 10,
-    backgroundColor: "#ff5722",
+    backgroundColor: "lavender",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 8,
     },
+    shadowOpacity: 0.44,
+    shadowRadius: 10.32,
     elevation: 16,
   },
 });
